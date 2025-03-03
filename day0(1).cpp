@@ -24,4 +24,7 @@ class Solution{
       }
   };
 
+  // Time Complexity: O(n) 
+  // space complexity: O(n)
+
   
