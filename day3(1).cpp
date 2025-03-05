@@ -18,6 +18,7 @@ class Solution {
           return true;
       }
   };
+  
 // Approach: Given number is converted into base-3 number.If it has 2 in digits then it is not sum of power of 3,otherwise it is.
 
 // Time Complexity: O(log n)
