@@ -1,0 +1,16 @@
+// Problem: Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+
+// Code:
+class Solution {
+  public:
+      void rotate(vector<int>& nums, int k) {
+          int n=nums.size();
+          k=k%n;
+          reverse(nums.begin(),nums.end()-k);
+          reverse(nums.begin()+n-k,nums.end());
+          reverse(nums.begin(),nums.end());    
+      }
+  };
+
+// TC:O(n)
+// SC:O(1)
