@@ -31,5 +31,5 @@ pair<int, int> getFloorAndCeil(vector<int> &a, int n, int x) {
 	}
 	return {floor,ceil};
 }
-// TC:O(n)
+// TC:O(log n)
 // SC:O(1)
