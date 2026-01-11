@@ -32,16 +32,15 @@ public:
             priority_queue<pair<int,int>, vector<pair<int,int>>, decltype(cmp)> pq(cmp);
             for(auto &p : mp) pq.push({p.second, p.first});
             auto tmp = pq;
-            pair<int,int> a={0,0}, b={0,0};
-            if(!tmp.empty()) {
-                a = tmp.top();
+            int sum=0;
+            int times=x;
+            while(times-- && !tmp.empty()) {
+                pair<int,int> a = tmp.top();
+                sum+=(a.first*a.second);
                 tmp.pop();
             }
-            if(!tmp.empty()) {
-                b = tmp.top();
-            }
 
-            ans.push_back(a.second*a.first + b.second*b.first);
+            ans.push_back(sum);
 
             if(i == nums.size()) break;
             mp[nums[i-k]]--;
